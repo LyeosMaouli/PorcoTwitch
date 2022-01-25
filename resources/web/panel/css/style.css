@@ -77,7 +77,7 @@ label {
 }
 
 input:checked+.slider {
-    background-color: #6441a5;
+    background-color: #f9007d;
 }
 
 input:focus+.slider {
@@ -147,7 +147,7 @@ ul.recent-events li table tr td {
 }
 
 .pagination>.active>a {
-    background-color: #6441a5;
+    background-color: #f9007d;
     border-color: #4b3671;
 }
 
@@ -156,7 +156,7 @@ ul.recent-events li table tr td {
 .pagination>.active>span,
 .pagination>.active>span:focus,
 .pagination>.active>span:hover {
-    background-color: #6441a5;
+    background-color: #f9007d;
     border-color: #4b3671;
 }
 
@@ -232,7 +232,7 @@ a.disabled {
 .swal-button--confirm,
 .swal-button--confirm:focus,
 .swal-button--confirm:active {
-    background-color: #6441a5;
+    background-color: #f9007d;
     text-decoration: none;
     border: 1px solid #2f098c;
     border-radius: 0;

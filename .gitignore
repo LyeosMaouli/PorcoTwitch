@@ -1,5 +1,11 @@
-# remove old project
+# Remove old project
 phantombot/
+
+# ENV file
+.env
+
+# Docker Compose Config
+docker-compose.yml
 
 # Windows image file caches
 Thumbs.db

@@ -243,6 +243,21 @@ $(function () {
                                 helpers.handlePanelSetInfo($('#dashboard-viewers').data('number', helpers.parseNumber(tempData.viewers)), 'dashboard-viewers', helpers.fixNumber(tempData.viewers));
                                 // Set followers.
                                 helpers.handlePanelSetInfo($('#dashboard-followers').data('number', helpers.parseNumber(tempData.followers)), 'dashboard-followers', helpers.fixNumber(tempData.followers));
+
+                                /**
+                                 * ADDED SUBCOUNTER - LYEOS
+                                 */
+                                socket.getDBTableValues('dashboard_get_sub_data', 'subCounter', function (data) {
+                                    for (a in data) {
+                                        if (data[a].key === 'dailySubs' || data[a].key === 'weeklySubs' || data[a].key === 'monthlySubs') {                
+                                            helpers.handlePanelSetInfo($('#dashboard-' + data[a].key).data('number', helpers.parseNumber(data[a].value)), 'dashboard-' + data[a].key, helpers.fixNumber(data[a].value));
+                                        }
+                                    }
+                                })
+                                /**
+                                 * ADDED SUBCOUNTER - LYEOS
+                                 */
+                                
                             });
                         });
                     }
@@ -489,6 +504,20 @@ $(function () {
     // Set an interval that updates basic panel info every 10 seconds.
     helpers.setInterval(function () {
         helpers.log('Refreshing dashboard data.', helpers.LOG_TYPE.INFO);
+        /**
+         * ADDED SUBCOUNTER - LYEOS
+         */
+        socket.getDBTableValues('dashboard_get_sub_data_refresh', 'subCounter', function (data) {
+            for (a in data) {
+                if (data[a].key === 'dailySubs' || data[a].key === 'weeklySubs' || data[a].key === 'monthlySubs') {                
+                    helpers.handlePanelSetInfo($('#dashboard-' + data[a].key).data('number', helpers.parseNumber(data[a].value)), 'dashboard-' + data[a].key, helpers.fixNumber(data[a].value));
+                }
+            }
+        })
+        /**
+         * ADDED SUBCOUNTER - LYEOS
+         */
+
         // Query stream data.
         socket.getDBValue('dashboard_get_data_refresh', 'panelData', 'stream', function (e) {
             // Parse our object.

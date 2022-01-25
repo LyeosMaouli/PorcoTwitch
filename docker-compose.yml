@@ -15,34 +15,54 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-version: '3'
 services:
   phantombot:
     container_name: phantombot
-    image: ghcr.io/phantombot/phantombot
+    # image: ghcr.io/phantombot/phantombot
+    # image: porco/porcotwitch
+    build: .
+    restart: unless-stopped
     ports:
-      - "25000:25000"
-    restart: always
-    volumes:
-      - PhantomBot_data:/opt/PhantomBot_data
+      - 25000:25000
     environment:
-      # ------ Override any botlogin.txt variable here, with the PHANTOMBOT_ prefix.
-      # ------ Note that after first run, you should edit the container to remove these variables
-      # ------ so that the bot works properly with features such as automatically refreshing OAuth.
+      # ------ Override any botlogin.txt variable here, with the PHANTOMBOT_ prefix
       # Twitch bot user (Required)
-      PHANTOMBOT_USER: ""
+      PHANTOMBOT_USER: "PorcoRobot"
       # Twitch bot user OAuth token (https://phantombot.github.io/PhantomBot/oauth/) (Required)
-      PHANTOMBOT_OAUTH: ""
+      PHANTOMBOT_OAUTH: "3w32k54z0rc4cpe4vckkatanrc4cbj"
       # Twitch caster channel OAuth token (https://phantombot.github.io/PhantomBot/oauth/)
-      PHANTOMBOT_APIOAUTH: ""
+      PHANTOMBOT_APIOAUTH: "gk4mhf7gozczyjxt82n6xv272jnx4e"
       # Twitch caster channel (Required)
-      PHANTOMBOT_CHANNEL: ""
+      PHANTOMBOT_CHANNEL: "touristegalactique"
       # Webinterface username
-      PHANTOMBOT_PANELUSER: ""
+      PHANTOMBOT_PANELUSER: "PorcoRobotAdmin"
       # Webinterface password
-      PHANTOMBOT_PANELPASSWORD: ""
-      # Webinterface use https?
-      PHANTOMBOT_USEHTTPS: "true"
+      PHANTOMBOT_PANELPASSWORD: "7nO59m5@I4QfIe"
+      # Webinterface use https? false (since caddy handles this)
+      PHANTOMBOT_USEHTTPS: "false"
+      PHANTOMBOT_PROXYBYPASSHTTPS: "true"
+      # Enables EventSub
+      PHANTOMBOT_USEEVENTSUB: "true"
+      PHANTOMBOT_EVENTSUBCALLBACKURL: "https://twitch.crewlin-borgne.com/eventsub"
+      # Indicates whether the bot is allowed to reload most JavaScript files when they are changed without a restart
+      PHANTOMBOT_RELOADSCRIPTS: "true"
+      # Indicates if Rollbar exception reporting is enabled
+      PHANTOMBOT_USEROLLBAR: "true"
+      # Indicates if the bots built-in webserver is enabled
+      PHANTOMBOT_WEBENABLE: "true"
+      # The TCP_NODELAY flag for TMI. Makes TMI less bandwidth efficient but possibly a little faster on outbound messages
+      PHANTOMBOT_TWITCH_TCP_NODELAY: "true"
+    volumes:
+      # - phantombot_PhantomBot:/opt/PhantomBot
+      - phantombot_PhantomBot_data:/opt/PhantomBot_data
 
 volumes:
-  PhantomBot_data:
+  # phantombot_PhantomBot:
+  #   external: true
+  phantombot_PhantomBot_data:
+    external: true
+
+networks:
+  default:
+    external:
+      name: $APP_NETWORK
