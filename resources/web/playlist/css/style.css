@@ -33,7 +33,7 @@
 }
 
 .header {
-    background-color: #6441a5;
+    background-color: #f9007d;
     margin-top: -20px;
     margin-bottom: 10px;
     max-width: 100%;
@@ -45,7 +45,7 @@
 }
 
 a {
-    color: #6441a5;
+    color: #f9007d;
     text-decoration: none;
 }
 
@@ -73,7 +73,7 @@ h1 {
 
 .chatFrame {
     border-style: solid;
-    border-color: #6441a5;
+    border-color: #f9007d;
     height: 600px;
     width: 300px;
     order: 1;
@@ -336,7 +336,7 @@ table {
     width: 60%;
     text-align: center;
     background-color: white;
-    color: #6441a5;
+    color: #f9007d;
     padding-top: 10px;
     padding-bottom: 10px;
     overflow: hidden;

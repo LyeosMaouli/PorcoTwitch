@@ -1,5 +1,5 @@
 
-# <img alt="PhantomBot" src="https://phantombot.github.io/PhantomBot/common/images/brand.png" width="600px"/>
+# <img alt="PhantomBot" src="https://github.com/LyeosMaouli/PorcoTwitch/blob/master/resources/web/common/images/brand.png" width="600px"/>
 
 ![Java CI](https://github.com/PhantomBot/PhantomBot/workflows/Java%20CI/badge.svg)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e78b35af8f2442d7a8c5040c41164739)](https://www.codacy.com/gh/PhantomBot/PhantomBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PhantomBot/PhantomBot&amp;utm_campaign=Badge_Grade)

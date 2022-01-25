@@ -314,7 +314,7 @@
 }
 
 .pretty.p-default input:checked ~ .state label:after {
-  background-color: #6441a5 !important;
+  background-color: #f9007d !important;
 }
 
 .pretty.p-default.p-thick .state label:before,
@@ -717,7 +717,7 @@
 }
 
 .pretty.p-default:not(.p-fill) input:checked ~ .state.p-primary-o label:after {
-  background-color: #6441a5 !important;
+  background-color: #f9007d !important;
 }
 
 .pretty.p-switch input:checked ~ .state.p-primary:before {
@@ -767,7 +767,7 @@
 }
 
 .pretty.p-default:not(.p-fill) input:checked ~ .state.p-info-o label:after {
-  background-color: #6441a5 !important;
+  background-color: #f9007d !important;
 }
 
 .pretty.p-switch input:checked ~ .state.p-info:before {
@@ -785,12 +785,12 @@
 
 .pretty input:checked ~ .state.p-default label:after,
 .pretty.p-toggle .state.p-default label:after {
-  background-color: #6441a5 !important;
+  background-color: #f9007d !important;
 }
 
 .pretty input:checked ~ .state.p-success label:after,
 .pretty.p-toggle .state.p-success label:after {
-  background-color: #6441a5 !important;
+  background-color: #f9007d !important;
 }
 
 .pretty input:checked ~ .state.p-success .icon,
@@ -922,7 +922,7 @@
 }
 
 .pretty.p-default:not(.p-fill) input:checked ~ .state.p-danger-o label:after {
-  background-color: #6441a5 !important;
+  background-color: #f9007d !important;
 }
 
 .pretty.p-switch input:checked ~ .state.p-danger:before {

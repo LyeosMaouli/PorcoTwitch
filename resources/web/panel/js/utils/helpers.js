@@ -162,7 +162,7 @@ $(function () {
             case 'follower':
                 return 'background-color: #c62828;';
             case 'bits':
-                return 'background-color: #6441a5;';
+                return 'background-color: #f9007d;';
             case 'host':
                 return 'background-color: #ed4c1c;';
             case 'tip':
@@ -1216,7 +1216,7 @@ $(function () {
      */
     helpers.log = function (message, type) {
         if (helpers.DEBUG_STATE === helpers.DEBUG_STATES.DEBUG || type === helpers.DEBUG_STATE || type === helpers.LOG_TYPE.FORCE) {
-            console.log('%c[PhantomBot Log]', 'color: #6441a5; font-weight: 900;', message);
+            console.log('%c[PhantomBot Log]', 'color: #f9007d; font-weight: 900;', message);
         }
     };
 

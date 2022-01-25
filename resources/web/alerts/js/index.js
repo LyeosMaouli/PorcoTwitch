@@ -64,7 +64,7 @@ $(function () {
      */
     function printDebug(message, force) {
         if (isDebug || force) {
-            console.log('%c[PhantomBot Log]', 'color: #6441a5; font-weight: 900;', message);
+            console.log('%c[PhantomBot Log]', 'color: #f9007d; font-weight: 900;', message);
         }
     }
 

@@ -20,12 +20,12 @@
 :root {
     --body-color: #1b1b1b;
     --tab-color: #212121;
-    --url-color: #6441a5;
+    --url-color: #f9007d;
     --url-hover-color: #6b49ab;
     --text-color: #cccccc;
     --table-odd: #2f2e2e;
     --table-even: #424242;
-    --btn-bgn-color: #6441a5;
+    --btn-bgn-color: #f9007d;
     --btn-bgn-hover: #6b49ab;
     --btn-txt-color: #2c2e2f;
     --btn-bor-color: #4b3671;
@@ -58,7 +58,7 @@ a:hover {
 }
 
 .header {
-    background-color: #6441a5;
+    background-color: #f9007d;
     margin-top: -20px;
     margin-bottom: 10px;
     max-width: 100%;
@@ -378,7 +378,7 @@ a:hover {
 }
 
 .slider-handle {
-    background-image: linear-gradient(to bottom, #6441a5 0, #6441a5 100%);
+    background-image: linear-gradient(to bottom, #f9007d 0, #f9007d 100%);
 }
 
 
