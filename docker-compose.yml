@@ -13,7 +13,7 @@
 #  
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
+# docker-compose.yml up --build
 
 services:
   phantombot:
@@ -31,9 +31,9 @@ services:
       # Twitch bot user (Required)
       PHANTOMBOT_USER: "PorcoRobot"
       # Twitch bot user OAuth token (https://phantombot.github.io/PhantomBot/oauth/) (Required)
-      PHANTOMBOT_OAUTH: "3w32k54z0rc4cpe4vckkatanrc4cbj"
+      #PHANTOMBOT_OAUTH: "3w32k54z0rc4cpe4vckkatanrc4cbj"
       # Twitch caster channel OAuth token (https://phantombot.github.io/PhantomBot/oauth/)
-      PHANTOMBOT_APIOAUTH: "gk4mhf7gozczyjxt82n6xv272jnx4e"
+      #PHANTOMBOT_APIOAUTH: "gk4mhf7gozczyjxt82n6xv272jnx4e"
       # Twitch caster channel (Required)
       PHANTOMBOT_CHANNEL: "touristegalactique"
       # Webinterface username
